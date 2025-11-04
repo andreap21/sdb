@@ -1,0 +1,52 @@
+
+:root {
+  --bg: #dadbdf;
+  --text: #1a1a1a;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+.card {
+  max-width: 980px;
+  width: 100%;
+  text-align: center;
+}
+h1, h2, .top-line, .bottom-line {
+  font-family: "Caveat", cursive;
+  line-height: 1.2;
+  margin: 0.25rem 0;
+}
+.top-line {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  opacity: 0.9;
+}
+.photo {
+  display: block;
+  width: min(100%, 980px);
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  margin: 1rem auto;
+}
+.bottom-line {
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  opacity: 0.85;
+}
+footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  font-family: "Cormorant Garamond", serif;
+}
