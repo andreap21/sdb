@@ -6,7 +6,7 @@ const app = express();
 
 // --- BASIC AUTH ---
 app.use(basicAuth({
-  users: { 'stefania': process.env.SITE_PASSWORD || 'dreambig030118' },
+  users: { 'stefania': process.env.SITE_PASSWORD || '#dreambig' },
   challenge: true,
   realm: 'Family Site'
 }));
