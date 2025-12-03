@@ -71,22 +71,35 @@ h2 {
   font-style: italic;
 }
 
-a {
+a.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   text-decoration: none;
-  color: var(--primary-color);
+  color: #ffffff;
+  /* White text */
+  background-color: var(--primary-color);
   font-weight: 500;
-  padding: 10px 20px;
-  border: 1px solid transparent;
+  padding: 12px 28px;
+  border-radius: 50px;
+  /* Pill shape */
+  border: 2px solid var(--primary-color);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(123, 63, 180, 0.2);
 }
 
-a:hover {
-  text-decoration: none;
-  border-color: var(--primary-color);
-  border-radius: 25px;
-  background-color: rgba(123, 63, 180, 0.05);
+a.contact-btn:hover {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(123, 63, 180, 0.3);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Responsive adjustments */
