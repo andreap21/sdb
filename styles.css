@@ -1,52 +1,105 @@
-
 :root {
-  --bg: #dadbdf;
-  --text: #1a1a1a;
+  --primary-color: #7b3fb4;
+  /* Purple from original */
+  --text-color: #333333;
+  --bg-gradient-start: #ffffff;
+  --bg-gradient-end: #e8d5f5;
+  /* More visible light purple */
 }
-* { box-sizing: border-box; }
-html, body {
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Cormorant Garamond", serif;
 }
-.wrapper {
+
+body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 4rem 1rem;
+  justify-content: flex-start;
+  /* Align to top */
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  padding-top: 15vh;
+  /* Position content in the first third */
 }
-.card {
-  max-width: 980px;
-  width: 100%;
+
+.container {
+  width: 90%;
+  max-width: 800px;
   text-align: center;
+  padding: 20px;
 }
-h1, h2, .top-line, .bottom-line {
-  font-family: "Caveat", cursive;
-  line-height: 1.2;
-  margin: 0.25rem 0;
-}
-.top-line {
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  opacity: 0.9;
-}
-.photo {
-  display: block;
-  width: min(100%, 980px);
+
+.logo {
+  max-width: 200px;
+  /* Reduced to 80% of 250px */
+  width: 40vw;
+  /* Reduced to 80% of 50vw */
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-  margin: 1rem auto;
+  margin-bottom: 2rem;
+  /* Optional: Add a subtle shadow if it's a cutout png */
+  /* filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1)); */
 }
-.bottom-line {
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  opacity: 0.85;
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
-footer {
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  opacity: 0.8;
-  font-family: "Cormorant Garamond", serif;
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.coming-soon {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #777;
+  font-style: italic;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  border-color: var(--primary-color);
+  border-radius: 25px;
+  background-color: rgba(123, 63, 180, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  body {
+    padding-top: 10vh;
+  }
 }
